@@ -171,11 +171,13 @@
                     <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-3xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-purple-600 p-1.5 shadow-2xl shadow-blue-500/20 rotate-1 hover:rotate-0 transition duration-500">
                         <div class="w-full h-full bg-slate-900 rounded-[22px] flex flex-col items-center justify-center text-center p-6 relative overflow-hidden group">
                             <!--
-                                [ẢNH 1: AVATAR CÁ NHÂN]
-                                Upload ảnh của bạn lên GitHub tại: images/avatar.jpg
-                                (Nếu đổi tên file trên GitHub, hãy sửa lại đường dẫn trong src="images/...")
+                                [ẢNH AVATAR CÁ NHÂN]
+                                Đường dẫn file trên GitHub: images/avatar.jpg
                             -->
-                            <img src="images/avatar.jpg" alt="Avatar Nguyễn Thành Đạt" class="w-28 h-28 rounded-full object-cover object-top shadow-inner mb-4 border-2 border-blue-400/60">
+                            <img src="images/avatar.jpg" alt="Avatar Nguyễn Thành Đạt" onerror="this.style.display='none'; document.getElementById('avatar-fallback').classList.remove('hidden');" class="w-28 h-28 rounded-full object-cover object-top shadow-inner mb-4 border-2 border-blue-400/60">
+                            <div id="avatar-fallback" class="hidden w-28 h-28 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-3xl font-extrabold shadow-inner mb-4">
+                                ĐẠT
+                            </div>
                             <h3 class="text-xl font-bold text-white">Nguyễn Thành Đạt</h3>
                             <p class="text-xs text-blue-400 font-medium mt-1">Chuyên Toán - THPT Chuyên Bến Tre</p>
 
@@ -359,12 +361,7 @@
                 <!-- Project Item 1 -->
                 <div class="project-card math p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 hover:shadow-xl transition duration-300 flex flex-col justify-between">
                     <div>
-                        <!--
-                            [ẢNH MÔ PHỎNG 2: DỰ ÁN TOÁN HỌC]
-                            Khung mô phỏng trực quan sẵn có (không cần file ảnh).
-                            Nếu sau này muốn đổi sang ảnh thật, có thể thay khối bên dưới bằng:
-                            <img src="images/project-math.jpg" alt="Bộ Công Cụ Hỗ Trợ Giải Toán" class="w-full h-44 rounded-xl object-cover mb-5 shadow-inner">
-                        -->
+                        <!-- Mô phỏng trực quan Dự án 1 -->
                         <div class="w-full h-44 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-700 p-4 flex flex-col justify-between text-white mb-5 shadow-inner font-mono">
                             <div class="flex items-center justify-between text-[11px] text-blue-100/90">
                                 <span>GRAPH & LOGIC LAB</span>
@@ -397,12 +394,7 @@
                 <!-- Project Item 2 -->
                 <div class="project-card code p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 hover:shadow-xl transition duration-300 flex flex-col justify-between">
                     <div>
-                        <!--
-                            [ẢNH MÔ PHỎNG 3: DỰ ÁN WEBSITE CÁ NHÂN]
-                            Khung mô phỏng giao diện web sẵn có (không cần file ảnh).
-                            Nếu sau này muốn đổi sang ảnh thật, có thể thay khối bên dưới bằng:
-                            <img src="images/project-portfolio.jpg" alt="Website Cá Nhân Nguyễn Thành Đạt" class="w-full h-44 rounded-xl object-cover mb-5 shadow-inner">
-                        -->
+                        <!-- Mô phỏng trực quan Dự án 2 -->
                         <div class="w-full h-44 rounded-xl bg-gradient-to-tr from-purple-600 to-pink-600 p-4 flex flex-col justify-between text-white mb-5 shadow-inner">
                             <div class="flex items-center space-x-1.5">
                                 <span class="w-2.5 h-2.5 rounded-full bg-white/80"></span>
@@ -549,13 +541,14 @@
                     </div>
 
                     <!--
-                        [ẢNH 4: QR TÀI KHOẢN NGÂN HÀNG]
-                        Upload ảnh QR của bạn lên GitHub tại: images/bank-qr.jpg
+                        [ẢNH QR CHUYỂN TIỀN]
+                        Đường dẫn file trên GitHub: images/bank-qr.jpg
                     -->
                     <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60">
                         <div class="flex flex-col sm:flex-row items-center gap-5">
                             <div class="w-36 h-36 rounded-xl bg-white p-2 border border-slate-200 dark:border-slate-700 flex items-center justify-center shrink-0 overflow-hidden">
-                                <img src="images/bank-qr.jpg" alt="QR Tài khoản ngân hàng NGUYEN THANH DAT" class="w-full h-full object-contain rounded-lg">
+                                <img src="images/bank-qr.jpg" alt="QR Tài khoản ngân hàng NGUYEN THANH DAT" onerror="this.style.display='none'; document.getElementById('qr-fallback').classList.remove('hidden');" class="w-full h-full object-contain rounded-lg">
+                                <span id="qr-fallback" class="hidden text-xs text-slate-500 text-center font-medium px-2" data-lang-vi="Thiếu file images/bank-qr.jpg" data-lang-en="Missing images/bank-qr.jpg">Thiếu file images/bank-qr.jpg</span>
                             </div>
                             <div class="space-y-1.5 text-center sm:text-left">
                                 <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400" data-lang-vi="QR NGÂN HÀNG (VIETQR)" data-lang-en="BANK QR CODE (VIETQR)">QR NGÂN HÀNG (VIETQR)</span>
@@ -601,4 +594,139 @@
 
                         <div>
                             <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase mb-2" data-lang-vi="Lời Nhắn" data-lang-en="Message">Lời Nhắn</label>
-                            <textarea rows="4" required placeholder="Nhập nội dung lời nhắn tại đây..." class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-
+                            <textarea rows="4" required placeholder="Nhập nội dung lời nhắn tại đây..." class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-md shadow-blue-500/25 transition">
+                            <span data-lang-vi="Gửi Lời Nhắn" data-lang-en="Send Message">Gửi Lời Nhắn</span>
+                        </button>
+
+                        <div id="form-status" class="hidden p-3 rounded-xl text-xs font-medium text-center"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="py-8 bg-slate-100 dark:bg-mathDark-900 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                © 2026 <strong>Nguyễn Thành Đạt</strong>. All rights reserved.
+            </div>
+            <div class="flex space-x-4">
+                <span>THPT Chuyên Bến Tre</span> • 
+                <span data-lang-vi="Thiết kế hiện đại & Tối ưu" data-lang-en="Modern Responsive Design">Thiết kế hiện đại & Tối ưu</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= JAVASCRIPT LOGIC ================= -->
+    <script>
+        // State variables
+        let currentLang = 'VI';
+
+        // Dark / Light Mode Toggle
+        function toggleDarkMode() {
+            const htmlTag = document.documentElement;
+            const themeIcon = document.getElementById('theme-icon');
+            
+            if (htmlTag.classList.contains('dark')) {
+                htmlTag.classList.remove('dark');
+                themeIcon.className = 'fa-solid fa-moon';
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlTag.classList.add('dark');
+                themeIcon.className = 'fa-solid fa-sun text-amber-400';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Initialize Theme from Preferences
+        (function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeIcon = document.getElementById('theme-icon');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+                if (themeIcon) themeIcon.className = 'fa-solid fa-sun text-amber-400';
+            } else {
+                document.documentElement.classList.remove('dark');
+                if (themeIcon) themeIcon.className = 'fa-solid fa-moon';
+            }
+        })();
+
+        // Language Switcher Toggle
+        function toggleLanguage() {
+            currentLang = currentLang === 'VI' ? 'EN' : 'VI';
+            document.getElementById('current-lang').innerText = currentLang === 'VI' ? 'EN' : 'VI';
+            
+            const elements = document.querySelectorAll('[data-lang-vi]');
+            elements.forEach(el => {
+                const textVi = el.getAttribute('data-lang-vi');
+                const textEn = el.getAttribute('data-lang-en');
+                
+                if (currentLang === 'EN' && textEn) {
+                    el.textContent = textEn;
+                } else if (currentLang === 'VI' && textVi) {
+                    el.textContent = textVi;
+                }
+            });
+        }
+
+        // Mobile Menu Drawer Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Project Category Filter
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const filterBtns = document.querySelectorAll('.project-filter-btn');
+
+            // Update button styles
+            filterBtns.forEach(btn => {
+                if (btn.getAttribute('data-filter') === category) {
+                    btn.className = 'project-filter-btn px-4 py-2 rounded-xl text-sm font-semibold transition bg-blue-600 text-white shadow-md shadow-blue-500/20';
+                } else {
+                    btn.className = 'project-filter-btn px-4 py-2 rounded-xl text-sm font-semibold transition bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700';
+                }
+            });
+
+            // Show/Hide Cards
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Form Submit Simulation
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const statusDiv = document.getElementById('form-status');
+            statusDiv.classList.remove('hidden', 'bg-red-100', 'text-red-700', 'bg-green-100', 'text-green-700');
+            
+            statusDiv.classList.add('bg-green-100', 'text-green-700', 'dark:bg-green-950/60', 'dark:text-green-300');
+            statusDiv.innerText = currentLang === 'VI' 
+                ? 'Cảm ơn bạn! Lời nhắn đã được gửi thành công.' 
+                : 'Thank you! Your message has been sent successfully.';
+            
+            document.getElementById('contact-form').reset();
+            setTimeout(() => {
+                statusDiv.classList.add('hidden');
+            }, 5000);
+        }
+
+        // Download CV Simulation
+        function downloadCV() {
+            const msg = currentLang === 'VI' 
+                ? 'Tính năng tải file CV sẽ tự động kích hoạt khi bạn đính kèm file CV.pdf của mình vào dự án.' 
+                : 'Resume download will be enabled when you attach your CV.pdf file.';
+            alert(msg);
+        }
+    </script>
+</body>
+</html>
